@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NutriTrack - Medical</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <h2>NutriTrack</h2>
+            <a href="index.html" class="tab-btn">About</a>
+            <a href="auth.html" class="tab-btn">Auth</a>
+            <a href="profile.html" class="tab-btn">Profile</a>
+            <a href="medical.html" class="tab-btn active">Medical</a>
+            <a href="dashboard.html" class="tab-btn" disabled>Dashboard</a>
+            <a href="planner.html" class="tab-btn" disabled>Planner</a>
+            <a href="history.html" class="tab-btn" disabled>History</a>
+        </div>
+        <div class="main-content">
+            <h1>Your Health Profile</h1>
+            <form id="medical-form" class="medical-form">
+                <input type="number" id="age" placeholder="Age" required>
+                <input type="number" id="weight" placeholder="Weight (kg)" required>
+                <input type="number" id="height" placeholder="Height (cm)" required>
+                <select id="activity" required>
+                    <option value="">Activity Level</option>
+                    <option value="sedentary">Sedentary</option>
+                    <option value="moderate">Moderate</option>
+                    <option value="active">Active</option>
+                </select>
+                <progress id="progress" value="0" max="100"></progress>
+                <button type="submit">Finish Setup</button>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

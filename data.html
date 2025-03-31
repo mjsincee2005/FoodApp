@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NutriTrack - Personal Data</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>NutriTrack</h1>
+    </header>
+    <div class="container">
+        <div class="card">
+            <h2>Your Details</h2>
+            <input type="number" id="height" placeholder="Height (cm)" required>
+            <input type="number" id="weight" placeholder="Weight (kg)" required>
+            <input type="number" id="age" placeholder="Age" required>
+            <select id="activity">
+                <option value="">Activity Level</option>
+                <option value="sedentary">Sedentary</option>
+                <option value="moderate">Moderate</option>
+                <option value="active">Active</option>
+            </select>
+            <input type="text" id="diet" placeholder="Dietary Preferences (e.g., Vegan)">
+            <button onclick="saveData()">Save & Continue</button>
+        </div>
+    </div>
+</body>
+</html>

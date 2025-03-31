@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NutriTrack - Auth</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <h2>NutriTrack</h2>
+            <a href="index.html" class="tab-btn">About</a>
+            <a href="auth.html" class="tab-btn active">Auth</a>
+            <a href="profile.html" class="tab-btn" disabled>Profile</a>
+            <a href="medical.html" class="tab-btn" disabled>Medical</a>
+            <a href="dashboard.html" class="tab-btn" disabled>Dashboard</a>
+            <a href="planner.html" class="tab-btn" disabled>Planner</a>
+            <a href="history.html" class="tab-btn" disabled>History</a>
+        </div>
+        <div class="main-content">
+            <div class="auth-container">
+                <div class="auth-toggle">
+                    <button id="login-toggle" class="active">Login</button>
+                    <button id="signup-toggle">Sign Up</button>
+                </div>
+                <form id="auth-form" class="auth-form">
+                    <input type="email" id="email" placeholder="Email" required>
+                    <input type="password" id="password" placeholder="Password" required>
+                    <input type="password" id="confirm-password" placeholder="Confirm Password" class="signup-only" required>
+                    <button type="submit" id="auth-btn">Login</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

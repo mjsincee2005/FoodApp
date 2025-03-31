@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NutriTrack - Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>NutriTrack</h1>
+        <nav>
+            <a href="index.html">About</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="planner.html">Meal Planner</a>
+            <a href="history.html">History</a>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="card">
+            <h2 id="greeting">Hello!</h2>
+            <input type="text" id="foodSearch" placeholder="Search for food...">
+            <div id="searchResults"></div>
+            <button onclick="location.href='planner.html'">Meal Planner</button>
+            <button onclick="location.href='history.html'">History</button>
+        </div>
+        <div class="card">
+            <h2>Daily Summary</h2>
+            <p>Calories: <span id="calories">0 / 2000</span></p>
+            <div class="progress-bar"><div class="progress" id="calProgress"></div></div>
+            <p>Protein: <span id="protein">0g / 80g</span></p>
+            <div class="progress-bar"><div class="progress" id="protProgress"></div></div>
+        </div>
+    </div>
+</body>
+</html>

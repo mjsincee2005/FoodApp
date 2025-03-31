@@ -3,15 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NutriTrack - About</title>
+    <title>NutriTrack - Meal Planner</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/interactjs/dist/interact.min.js"></script>
+    <script src="script.js" defer></script>
 </head>
 <body>
     <header>
         <h1>NutriTrack</h1>
         <nav>
             <a href="index.html">About</a>
-            <a href="login.html">Login</a>
             <a href="dashboard.html">Dashboard</a>
             <a href="planner.html">Meal Planner</a>
             <a href="history.html">History</a>
@@ -19,14 +20,13 @@
     </header>
     <div class="container">
         <div class="card">
-            <h2>Your Nutrition, Your Way</h2>
-            <p>NutriTrack helps you track food, plan meals, and achieve health goals with personalized insights.</p>
-            <ul>
-                <li>Track calories and nutrients</li>
-                <li>Plan meals effortlessly</li>
-                <li>Analyze your progress</li>
-            </ul>
-            <button onclick="location.href='login.html'">Get Started</button>
+            <h2>Meal Planner</h2>
+            <div id="foodList"></div>
+            <h3>Weekly Plan</h3>
+            <div class="meal-day" data-day="Monday">Monday</div>
+            <div class="meal-day" data-day="Tuesday">Tuesday</div>
+            <div class="meal-day" data-day="Wednesday">Wednesday</div>
+            <button onclick="exportPlan()">Export as PDF</button>
         </div>
     </div>
 </body>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NutriTrack - Profile Setup</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>NutriTrack</h1>
+    </header>
+    <div class="container">
+        <div class="card">
+            <h2>Set Up Your Profile</h2>
+            <input type="text" id="name" placeholder="Name" required>
+            <select id="gender">
+                <option value="">Gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+            <input type="text" id="nickname" placeholder="Nickname" required>
+            <button onclick="saveProfile()">Next</button>
+        </div>
+    </div>
+</body>
+</html>

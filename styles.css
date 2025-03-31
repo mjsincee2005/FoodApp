@@ -1,82 +1,122 @@
-body {
-  font-family: Arial, sans-serif;
+* {
   margin: 0;
-  padding: 20px;
-  background-color: #f4f4f4;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  background: #f4f7f6;
+  color: #333;
+  line-height: 1.6;
 }
 
 .container {
-  max-width: 800px;
+  max-width: 1200px;
   margin: 0 auto;
-  background: white;
   padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
-.tab {
-  display: none;
+header {
+  background: #2ecc71;
+  color: white;
+  padding: 15px 0;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
-.tab.active {
-  display: block;
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
 }
 
-h1 {
-  color: #333;
+nav a:hover {
+  text-decoration: underline;
 }
 
-input, select {
-  display: block;
-  width: 100%;
-  padding: 10px;
-  margin: 10px 0;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+h1, h2 {
+  margin-bottom: 20px;
+}
+
+.card {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
 }
 
 button {
-  padding: 10px 20px;
-  background-color: #007bff;
+  background: #2ecc71;
   color: white;
   border: none;
-  border-radius: 4px;
+  padding: 10px 20px;
+  border-radius: 5px;
   cursor: pointer;
-  margin: 5px;
+  transition: background 0.3s;
 }
 
 button:hover {
-  background-color: #0056b3;
+  background: #27ae60;
 }
 
-.dropdown {
-  position: absolute;
-  background: white;
-  border: 1px solid #ccc;
-  max-height: 200px;
-  overflow-y: auto;
-  width: 300px;
-  z-index: 10;
-}
-
-.dropdown div {
+input, select {
+  width: 100%;
   padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.progress-bar {
+  height: 20px;
+  background: #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress {
+  height: 100%;
+  background: #2ecc71;
+  transition: width 0.5s;
+}
+
+.food-item {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
   cursor: pointer;
 }
 
-.dropdown div:hover {
-  background-color: #f0f0f0;
+.food-item:hover {
+  background: #f0f0f0;
 }
 
-.dialog {
-  display: none;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: white;
+.meal-day {
+  border: 2px dashed #ccc;
   padding: 20px;
-  border: 1px solid #ccc;
-  box-shadow: 0 0 10px rgba(0,0,0,0.3);
-  z-index: 20;
+  min-height: 100px;
+  margin: 10px 0;
+}
+
+.draggable {
+  background: #e0f7fa;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 5px;
+  cursor: move;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  nav a {
+      display: block;
+      margin: 10px 0;
+  }
+  .meal-day {
+      min-height: 80px;
+  }
 }
