@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nutrition App</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Tab-1: About -->
+    <div id="tab-1" class="tab active">
+      <h1>About the App</h1>
+      <p>Track your nutrition, plan meals, and stay healthy with Nutrition App!</p>
+      <button onclick="window.switchTab('tab-2')">Get Started</button>
+    </div>
+
+    <!-- Tab-2: Authentication -->
+    <div id="tab-2" class="tab">
+      <h1>Login / Sign Up</h1>
+      <input type="email" id="email" placeholder="Email">
+      <input type="password" id="password" placeholder="Password">
+      <button onclick="signUp()">Sign Up</button>
+      <button onclick="signIn()">Sign In</button>
+      <button onclick="signInWithGoogle()">Sign In with Google</button>
+    </div>
+
+    <!-- Tab-3: Profile Setup -->
+    <div id="tab-3" class="tab">
+      <h1>Tell Us About Yourself</h1>
+      <input type="text" id="name" placeholder="Name">
+      <select id="gender">
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        <option value="other">Other</option>
+      </select>
+      <input type="text" id="nickname" placeholder="Nickname">
+      <button onclick="saveProfile()">Next</button>
+    </div>
+
+    <!-- Tab-4: Personal/Medical Data -->
+    <div id="tab-4" class="tab">
+      <h1>Personal & Medical Info</h1>
+      <input type="number" id="age" placeholder="Age">
+      <input type="number" id="height" placeholder="Height (cm)">
+      <input type="number" id="weight" placeholder="Weight (kg)">
+      <input type="text" id="conditions" placeholder="Medical Conditions (e.g., diabetes)">
+      <button onclick="saveMedicalData()">Next</button>
+    </div>
+
+    <!-- Tab-5: Dashboard -->
+    <div id="tab-5" class="tab">
+      <h1 id="greeting"></h1>
+      <input type="text" id="food-search" placeholder="Search food...">
+      <div id="dropdown" class="dropdown"></div>
+      <div id="food-dialog" class="dialog"></div>
+      <div id="nutrient-tracker">
+        <p>Calories: <span id="calories">0</span>/2000 kcal</p>
+        <p>Protein: <span id="protein">0</span>/50 g</p>
+      </div>
+      <p>Health Rating: <span id="health-rating">N/A</span></p>
+      <button onclick="window.switchTab('tab-6')">Meal Planner</button>
+      <button onclick="window.switchTab('tab-7')">History</button>
+      <button onclick="signOutUser()">Sign Out</button>
+    </div>
+
+    <!-- Tab-6: Meal Planner -->
+    <div id="tab-6" class="tab">
+      <h1>Meal Planner</h1>
+      <div id="meal-plan">
+        <p>Plan your week here (basic placeholder).</p>
+      </div>
+      <button onclick="exportToPDF()">Export as PDF</button>
+      <button onclick="window.switchTab('tab-5')">Back</button>
+    </div>
+
+    <!-- Tab-7: History -->
+    <div id="tab-7" class="tab">
+      <h1>Food History</h1>
+      <select id="time-filter">
+        <option value="month">Monthly</option>
+        <option value="year">Yearly</option>
+      </select>
+      <canvas id="history-chart"></canvas>
+      <button onclick="window.switchTab('tab-5')">Back</button>
+    </div>
+  </div>
+
+  <!-- Firebase SDK v11.5.0 -->
+  <script type="module" src="https://www.gstatic.com/firebasejs/11.5.0/firebase-app.js"></script>
+  <script type="module" src="https://www.gstatic.com/firebasejs/11.5.0/firebase-auth.js"></script>
+  <script type="module" src="https://www.gstatic.com/firebasejs/11.5.0/firebase-firestore.js"></script>
+  <!-- External Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script type="module" src="firebase.js"></script>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
